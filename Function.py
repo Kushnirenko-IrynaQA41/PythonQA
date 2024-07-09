@@ -81,3 +81,106 @@
 # months = [(1, 'January'), (9, 'September'), (7, 'July'), (4, 'March')]
 # print(sorted(months, key=lambda x: x[1]))
 # print(sorted(months))
+# урок 04.07.2024
+#
+# animal = 'kangaroo'
+# def print_global():
+#     print('inside print_global:', animal)
+# print('at the top level:', animal)
+# print_global()
+# ------------------------------------
+animal = 'kangaroo'
+# def change_and_print_global():
+#     print('inside change_and_print_global:', animal)
+#     animal = 'giraffe'
+#     print('after the change:', animal)
+# change_and_print_global()
+# ---------------------------------------
+# def change_local():
+#     animal = 'giraffe'
+#     print('inside change_local:', animal, id(animal))
+# change_local()
+# print(animal)
+# print(id(animal))
+# -------------------------
+# def change_and_print_global():
+#     global animal
+#     animal = 'giraffe'
+#     print('inside change_and_print_global:', animal)
+# print(animal)
+# change_and_print_global()
+# print(animal)
+# ----------------------------------------
+
+# def change_local():
+#     animal = 'giraffe' # локальна змінна
+#     print('locals:', locals())
+# print(animal)
+# change_local()
+# print('locals:', locals())
+# print('globals:', globals())
+# print(animal)
+# import random
+# # for i in range(5):
+# #     print(random.randint(1, 10))
+# from random import randint, random
+# for i in range(5):
+#     print(randint(1, 10))
+# print(random())
+# import math
+# print(math.fabs(-221.1))
+#
+# print(math.floor(56.8))
+#
+# print(math.ceil(38.3))
+#
+# print(math.factorial(7))
+#
+# print(math.pow(4, 3))
+#
+# print(math.sqrt(256))
+#
+# print(math.radians(180))
+#
+# print(math.degrees(math.pi))
+# -----------------------
+# import string
+# s = 'It was nice talking to you! Thank you!'
+# print(s)
+# print(string.capwords(s))
+# ------------------------------
+# import inspect
+# import string
+#
+# def is_str(value):
+#     return isinstance(value, str)
+#
+# for name, value in inspect.getmembers(string, is_str):
+#     if name.startswith('_'):
+#         continue
+#     print('{0} = {1}'.format(name, repr(value)))
+# ------------------------------------------
+# from collections import Counter
+# birds = ['stork', 'sparrow', 'woodpecker', 'owl', 'woodpecker', 'sparrow', 'sparrow']
+# birds_counter = Counter(birds)
+# print(birds_counter)
+# print(birds_counter['woodpecker'])
+# print(birds_counter['sparrow'])
+# --------------------------------
+# from collections import Counter
+# birds = ['stork', 'sparrow', 'woodpecker', 'owl', 'woodpecker', 'sparrow', 'sparrow']
+# birds_counter = Counter(birds)
+# other_birds = ['flamingo', 'nightingale', 'stork', 'sparrow']
+# for bird in other_birds:
+#     print('{0} : {1}'.format(bird, birds_counter[bird]))
+# --------------------------
+# from collections import OrderedDict
+# from pprint import pprint
+# regions = OrderedDict([
+#     ('mountains', 'Himalayas'),
+#     ('sands', 'Sahara'),
+#     ('rivers', 'Yangtze')
+# ])
+# print(regions)
+# pprint(regions)
+# ----------------------------
