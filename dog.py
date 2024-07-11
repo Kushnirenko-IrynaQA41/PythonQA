@@ -7,7 +7,6 @@ print("My dog is " + str(my_dog.age) + " years old.")
 my_dog.sit()
 my_dog.roll_over()
 
-python classdog.py
 
 
 
